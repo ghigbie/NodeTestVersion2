@@ -23,11 +23,14 @@ it("should square a number", () => {
 });
 
 it("set firstName and lastName", () => {
-    let user = "Billy Bobby";
-    let res = utils.setName({}, user);
+    let user = {location: "Santa Fe", age: 25}
+    let fullName = "Billy Bobby";
+    let res = utils.setName(user, fullName);
     expect(res).toEqual({
+        age: 25,
         firstName: "Billy",
-        lastName: "Bobby"
+        lastName: "Bobby",
+        location: "Santa Fe"
     }).toBeA(Object);
 });
 
