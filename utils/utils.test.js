@@ -25,3 +25,15 @@ it("should square a number", () => {
 it("should return some value", () => {
     expect(12).toNotBe(11);
 });
+
+it("should compare two objects", () => {
+    expect({name: "mike"}).toNotEqual({name: "Mike"}); //used for equality with objects and arrays
+});
+
+it("should examine an array", () => {
+    expect([1, 2, 3]).toInclude(5); //looks at values of arrays
+});
+
+if("should examine an array", () => {
+    expect([1, 2, 3]).toExclude(6); //another array testing method
+});
