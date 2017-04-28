@@ -4,7 +4,11 @@ const express = require("express"),
 let port = 3010;
 
 app.get("/", (req, res) => {
-    res.send("<h1>Welcome to the landing page</h1>");
+    res.status(404).send({
+        error: "Page not found",
+        name: "Todo App v1.0"
+    });
+    //("<h1>Welcome to the landing page</h1>");
     console.log("You are in the landing page");
 });
 
