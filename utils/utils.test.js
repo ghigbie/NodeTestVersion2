@@ -14,10 +14,10 @@ it("should add two numbers", () => {
 });
 
 it("should asyncAdd two numbers", (done) => {
-    let res = utils.asyncAdd(44, 11, (sum) =>{
+    utils.asyncAdd(44, 11, (sum) =>{
+        expect(sum).toBe(55).toBeA("number");
+        done();
     });
-    expect(res).toBe(55).toBeA("number");
-    done();
 });
 
 it("should square a number", () => {
