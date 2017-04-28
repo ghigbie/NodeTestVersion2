@@ -22,6 +22,15 @@ it("should square a number", () => {
     // }
 });
 
+it("set firstName and lastName", () => {
+    let user = "Billy Bobby";
+    let res = utils.setName({}, user);
+    expect(res).toEqual({
+        firstName: "Billy",
+        lastName: "Bobby"
+    }).toBeA(Object);
+});
+
 it("should return some value", () => {
     expect(12).toNotBe(11);
 });
@@ -34,6 +43,16 @@ it("should examine an array", () => {
     expect([1, 2, 3]).toInclude(5); //looks at values of arrays
 });
 
-if("should examine an array", () => {
+it("should examine an array", () => {
     expect([1, 2, 3]).toExclude(6); //another array testing method
+});
+
+it("should examine an object", () => {
+    expect({
+        name: "Kristi",
+        age: 25,
+        location: "Santa Fe"
+    }).toExclude({
+        age: 24
+    });//looks to see if object has a value
 });
