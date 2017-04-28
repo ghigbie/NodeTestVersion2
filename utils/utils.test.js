@@ -29,6 +29,13 @@ it("should square a number", () => {
     // }
 });
 
+it("should asyncSquare a number", (done) => {
+    utils.asyncSquare(10, (result) => {
+        expect(result).toBe(100).toBeA("number");
+        done();
+    });
+});
+
 it("set firstName and lastName", () => {
     let user = {location: "Santa Fe", age: 25}
     let fullName = "Billy Bobby";

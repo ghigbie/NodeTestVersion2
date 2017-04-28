@@ -8,7 +8,7 @@ module.exports.asyncAdd = (a, b, callback) => {
 
 module.exports.square = (x) => x*x;
 
-module.exports.asynSquare = (x, callback) =>{
+module.exports.asyncSquare = (x, callback) =>{
     setTimeout(() => {
         callback(x*x);
     }, 1000);
