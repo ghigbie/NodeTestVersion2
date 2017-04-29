@@ -56,29 +56,37 @@ describe("Set Name", () =>{
 });
 
 describe("Playground", () => {
-    it("should return some value", () => {
-        expect(12).toNotBe(11);
+    describe("#return", () => {
+        it("should return some value", () => {
+            expect(12).toNotBe(11);
+        });
     });
 
-    it("should compare two objects", () => {
-        expect({name: "mike"}).toNotEqual({name: "Mike"}); //used for equality with objects and arrays
+    describe("#compare", () => {
+        it("should compare two objects", () => {
+            expect({name: "mike"}).toNotEqual({name: "Mike"}); //used for equality with objects and arrays
+        });
     });
 
-    it("should examine an array", () => {
-        expect([1, 2, 3]).toInclude(5); //looks at values of arrays
+    describe("#arrays", () => {
+        it("should examine an array", () => {
+            expect([1, 2, 3]).toInclude(5); //looks at values of arrays
+        });
+
+        it("should examine an array", () => {
+            expect([1, 2, 3]).toExclude(6); //another array testing method
+        });
     });
 
-    it("should examine an array", () => {
-        expect([1, 2, 3]).toExclude(6); //another array testing method
-    });
-
-    it("should examine an object", () => {
-        expect({
-            name: "Kristi",
-            age: 25,
-            location: "Santa Fe"
-        }).toExclude({
-            age: 24
-        });//looks to see if object has a value
+    describe("#object", () => {
+        it("should examine an object", () => {
+            expect({
+                name: "Kristi",
+                age: 25,
+                location: "Santa Fe"
+            }).toExclude({
+                age: 24
+            });//looks to see if object has a value
+        });
     });
 });
