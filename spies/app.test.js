@@ -17,8 +17,8 @@ describe("App", () => {
 
     it("should call the spy correctly with arguments", () => {
         let spy = expect.createSpy();
-        spy("George", 25);
-        expect(spy).toHaveBeenCalledWith("George", 25);
+        spy("Matt", 25);
+        expect(spy).toHaveBeenCalledWith("Matt", 25);
     });
 
     it("should call saveuser with user object", () => {
